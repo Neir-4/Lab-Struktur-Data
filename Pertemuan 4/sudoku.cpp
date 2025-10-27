@@ -49,9 +49,9 @@ bool isValid(const vector<vector<int>>& board, int row, int col, int num) {
 
 // Fungsi utama pemecah Sudoku menggunakan rekursif DFS
 bool solveSudoku(vector<vector<int>>& board) {
-    //tampilkan boardnya
-    for (int i = 0; i<9; i++){ 
-        for (int j = 0; j<9; j++){
+    //masukin boardnya
+    for (int i = 0; i<9; i++){ //kebawah
+        for (int j = 0; j<9; j++){ //kesamping
             if (board[i][j] == 0){ // cek nilai 0
                 for (int r = 1; r<=9 ; r++){
                     if (isValid(board,i,j,r)){
@@ -93,4 +93,5 @@ int main() {
     }
 
     return 0;
+
 }
